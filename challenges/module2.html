@@ -1,0 +1,77 @@
+<html>
+    <header>
+        <title>Modulo 2 JavaScript</title>
+    </header>
+    <body>
+
+        <!-- desafios 1 e 2  
+        <button class="botao"> Adicionar Quadrado</button>
+        <div class="squares"></div>
+        -->
+        
+        <!-- Desafios 3 e 4 -->
+        <ul class="listaNomes"></ul>
+        <input type="text" class="nome" />
+        <button class="botao"> Adicionar nome</button>
+        
+
+        <script>
+
+            /* desafios 1 e 2
+            var squaresElement = document.querySelector('.squares');
+            var buttonElement = document.querySelector('.botao');
+            
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+
+            buttonElement.onclick = function() {
+                var quadrado = document.createElement('div');
+
+                quadrado.style.width = 100;
+                quadrado.style.height = 100;
+                quadrado.style.backgroundColor = '#f00';
+                quadrado.style.marginTop = 8;
+                
+                quadrado.onmouseover = function(){
+                    quadrado.style.backgroundColor = getRandomColor();
+                }
+
+                squaresElement.appendChild(quadrado);
+            };
+            */
+
+            /*Desafios 3 e 4*/
+            var textElement = document.querySelector('.nome');
+            var buttonElement = document.querySelector('.botao');
+            var listElement = document.querySelector('.listaNomes');
+
+            var nomes = [ "Diego", "Gabriel", "Lucas" ];
+
+            for (let i = 0; i < nomes.length; i++) {
+                var li = document.createElement('li');
+                const nome = document.createTextNode(nomes[i]);
+                
+                li.appendChild(nome);
+
+                listElement.appendChild(li);
+            }
+
+            buttonElement.onclick = function() {
+                var text = document.createTextNode(textElement.value);
+                textElement.value = '';
+
+                var li = document.createElement('li');
+                li.appendChild(text);
+
+                listElement.appendChild(li);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <Title>JavaScript</Title>
+    </head>
+    <body>
+        
+        <script>
+            
+            /** Desafio 1
+            function retorna(end){
+                console.log('O Usuário mora em ' +end.cidade+' / '+end.uf+', no bairro '+end.bairro+', na rua "'+end.rua+'" com n '+end.numero);
+            }
+
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+
+            retorna(endereco);
+             */
+
+            /* Desafio 2
+            function pares(x, y) {
+
+                for ( var i = x; i <= y; i++ ) {
+                    if ( i % 2 == 0 ) {
+                        console.log( i+"," );
+                    }
+                }
+            }
+            pares( 32, 322 );
+            */
+
+            /*Desafio 3
+            function temHabilidades(skills) {
+                var index = skills.indexOf("Javascript");
+                if ( index < 0) {
+                    console.log( false );
+                } else {
+                    console.log( true );
+                }
+            }
+            var skills = [ "Javascript", "ReactJS", "React Native" ];
+            temHabilidades(skills);
+            */
+
+            /*Desafio 4
+            function experiencia(anos) {
+                // De 0-1 ano: Iniciante
+                // De 1-3 anos: Intermediário
+                // De 3-6 anos: Avançado
+                // De 7 acima: Jedi Master
+           
+                if  ( anos === 0 ){
+                    return "Um bosta";
+                } else if ( anos >= 0 && anos <= 1 ){
+                    return "Iniciantes";
+                }else if ( anos >= 1 && anos <= 3 ) {
+                    return "Intermediário";
+                } else if ( anos >= 3 && anos <= 6 ) {
+                    return "Avançado";
+                } else if ( anos >= 7 ) {
+                    return "Jedi Master";
+                }                
+            }
+            var anosEstudos = 0.1;
+            var xp = experiencia(anosEstudos);
+            console.log(xp);
+            */
+
+            /*Desafio 5*/
+            function teste(object) {
+                for (const index of object) {
+                    console.log("O "+index.nome+" possui as habilidades: "+index.habilidades.join(', '));
+                }
+            }
+            var usuarios = [
+                {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            teste(usuarios);
+
+
+        </script>
+    </body>
+</html>
