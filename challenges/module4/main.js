@@ -1,3 +1,7 @@
-var xhr = new XMLHttpRequest();
-
-xhr.open('GET', 'https://api.github/users/diego3g');
+axios.get('https://api.github.com/users/samuel-neves/repos')
+    .then(function(response) {
+        console.log(response);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
