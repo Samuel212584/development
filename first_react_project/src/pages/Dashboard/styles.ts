@@ -69,6 +69,7 @@ export const Repositories = styled.div`
 
   a {
     background: #fff;
+    border: 1px solid #e1e1e6;
     border-radius: 5px;
     width: 100%;
     padding: 24px;
@@ -77,10 +78,10 @@ export const Repositories = styled.div`
 
     display: flex;
     align-items: center;
-    transition: transform 0.2s;
+    transition: box-shadow 0.2s;
 
     &:hover {
-      transform: translateX(10px);
+      box-shadow: 0 0 16px #b4b4b8;
     }
 
     & + a {
