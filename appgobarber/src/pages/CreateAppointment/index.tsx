@@ -29,7 +29,7 @@ export interface Provider {
   avatar_url: string;
 }
 
-const Dashboard: React.FC = () => {
+const CreateAppointment: React.FC = () => {
   const { user } = useAuth();
   const { goBack } = useNavigation();
 
@@ -94,4 +94,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default CreateAppointment;
