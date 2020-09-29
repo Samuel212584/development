@@ -25,7 +25,11 @@ export const HeaderTitle = styled.Text`
   line-height: 28px;
 `;
 
+export const LogoutButton = styled.TouchableOpacity``;
+
 export const UserName = styled.Text`
+  font-size: 20px;
+  line-height: 28px;
   color: #ff9000;
   font-family: 'RobotoSlab-Medium';
 `;
