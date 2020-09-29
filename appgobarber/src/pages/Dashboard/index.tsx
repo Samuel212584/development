@@ -8,6 +8,7 @@ import {
   Container,
   Header,
   HeaderTitle,
+  LogoutButton,
   UserName,
   ProfileButton,
   UserAvatar,
@@ -42,7 +43,10 @@ const Dashboard: React.FC = () => {
 
   const navigateToProfile = useCallback(() => {
     navigate('Profile');
-    // signOut();
+  }, [navigate]);
+
+  const handleLogout = useCallback(() => {
+    signOut();
   }, [signOut]);
 
   const navigateToCreateAppointment = useCallback(
@@ -57,7 +61,9 @@ const Dashboard: React.FC = () => {
       <Header>
         <HeaderTitle>
           Bem Vindo, {'\n'}
-          <UserName>{user.name}</UserName>
+          <LogoutButton onPress={handleLogout}>
+            <UserName>{user.name}</UserName>
+          </LogoutButton>
         </HeaderTitle>
 
         <ProfileButton onPress={navigateToProfile}>
